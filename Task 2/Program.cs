@@ -1,24 +1,25 @@
-﻿// Create a class named Circle.
-public class Circle
+﻿class Circle
 {
-    //Inside the class, declare a constant variable named PI and initialize it with the value 3.14.
-    const double PI = 3.14;
+    public const double Pi = 3.14;
 
-    //In the Main() method of Program.cs,
-    //Try to modify the value of PI of the Circle class and observe the compilation error and explain the error.
-    public Circle()
+    public double calculateArea(double radius)
     {
-        //PI = 3.14159; //it is causing compilation error
+        return Pi * radius * radius;
     }
 
-    //create methods to calculate area and perimeter of the circle.
-    public double CalculateArea(double radius)
+    public double calculatePerimeter(double radius)
     {
-        return PI * radius * radius;
+        double circumference = 2 * Pi * radius;
+        return circumference;
     }
 
-    public double CalculatePerimeter(double radius)
+}
+
+class Program
+{
+    static void Main()
     {
-        return 2 * PI * radius;
+
+      //  Circle.Pi = 3.14159; // It is causing compilation error
     }
 }
